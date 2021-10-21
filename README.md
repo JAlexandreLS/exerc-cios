@@ -1,2 +1,2 @@
-# exercícios
- Curso de HTML5 e CSS3 do Curso em Vídeo
+# exercicios
+ curso de html5 e css3 do curso em video
