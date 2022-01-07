@@ -13,6 +13,7 @@
       table {
           width: 500px;
           border-collapse: collapse;
+          position:relative;
       }
 
       td, th {
@@ -20,13 +21,41 @@
           padding: 10px;
       }
 
+      caption {
+          font-size: 1.5em;
+          font-weight: bold;
+          padding: 10px;
+          background-color: lightgray;
+      }
+
       thead, tfoot {
           background-color: gray;
           color: white;
       }
+
+      thead > tr > th {
+          position: sticky;
+          top: -1px;
+          background-color: gray;
+      }
+
+      tbody > tr:nth-child(odd) { /*2n-1*/
+          background-color: white;
+      }
+
+      tbody > tr:nth-child(even) { /*2n*/
+          background-color: lightgray;
+      }
+
       td.num {
           text-align: right;
       }
+
+      p {
+        text-align: left;
+        font-size: 7pt;
+      }
+
   </style>
 </head>
 <body>
@@ -42,128 +71,133 @@
               tr, td, th
     -->
     <table>
+      <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-              <th>Estado</th>
-              <th>População</th>
+              <th scope="col">Estado</th>
+              <th scope="col" style="width: 50px;">População</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>São Paulo</td>
-                <td class="num">45.919.049</td>
+                <td class="num">46.289.333</td>
             </tr>
             <tr>
               <td>Minas Gerais</td>
-              <td class="num">21.168.791</td>
+              <td class="num">21.292.666</td>
             </tr>
             <tr>
               <td>Rio de Janeiro</td>
-              <td class="num">17.264.943</td>
+              <td class="num">17.366.189</td>
             </tr>
             <tr>
               <td>Bahia</td>
-              <td class="num">14.873.064</td>
+              <td class="num">14.930.634</td>
             </tr>
             <tr>
               <td>Paraná</td>
-              <td class="num">11.473.957</td>
+              <td class="num">11.516.840</td>
             </tr>
             <tr>
               <td>Rio Grande do Sul</td>
-              <td class="num">11.371.239</td>
+              <td class="num">11.422.973</td>
             </tr>
             <tr>
               <td>Pernambuco</td>
-              <td class="num">9.557.071</td>
+              <td class="num">9.616.621</td>
             </tr>
             <tr>
               <td>Ceará</td>
-              <td class="num">9.132.028</td>
+              <td class="num">9.187.103</td>
             </tr>
             <tr>
               <td>Pará</td>
-              <td class="num">8.002.845</td>
+              <td class="num">8.690.745</td>
             </tr>
             <tr>
               <td>Santa Catarina</td>
-              <td class="num">7.064.788</td>
+              <td class="num">7.252.502</td>
             </tr>
             <tr>
               <td>Maranhão</td>
-              <td class="num">7.875.181</td>
+              <td class="num">7.114.598</td>
             </tr>
             <tr>
               <td>Goiás</td>
-              <td class="num">7.019.354</td>
+              <td class="num">7.113.540</td>
             </tr> 
             <tr>
               <td>Amazonas</td>
-              <td class="num">4.564.597</td>
+              <td class="num">4.207.714</td>
             </tr>
             <tr>
               <td>Espírito Santo</td>
-              <td class="num">4.510.650</td>
+              <td class="num">4.064.052</td>
             </tr>
             <tr>
               <td>Paraíba</td>
-              <td class="num">4.510.127</td>
+              <td class="num">4.039.277</td>
             </tr>
             <tr>
               <td>Rio Grande do Norte</td>
-              <td class="num">3.506.853</td>
+              <td class="num">3.534.165</td>
             </tr>
             <tr>
               <td>Mato Grosso</td>
-              <td class="num">3.454.466</td>
+              <td class="num">3.526.220</td>
             </tr>
             <tr>
               <td>Alagoas</td>
-              <td class="num">3.337.367</td>
+              <td class="num">3.351.543</td>
             </tr>
             <tr>
               <td>Piauí</td>
-              <td class="num">3.273.327</td>
+              <td class="num">3.281.480</td>
             </tr>
             <tr>
               <td>Distrito Federal</td>
-              <td class="num">3.213.269</td>
+              <td class="num">3.055.149</td>
             </tr>
             <tr>
               <td>Mato Grosso do Sul</td>
-              <td class="num">2.778.704</td>
+              <td class="num">2.809.394</td>
             </tr>
             <tr>
               <td>Sergipe</td>
-              <td class="num">2.290.434</td>
+              <td class="num">2.318.822</td>
             </tr>
             <tr>
               <td>Rondônia</td>
-              <td class="num">1.777.225</td>
+              <td class="num">1.796.460</td>
             </tr>
             <tr>
               <td>Tocantis</td>
-              <td class="num">1.572.066</td>
+              <td class="num">1.590.248</td>
             </tr>
             <tr>
               <td>Acre</td>
-              <td class="num">861.905</td>
+              <td class="num">894.470</td>
             </tr>
             <tr>
               <td>Amapá</td>
-              <td class="num">645.721</td>
+              <td class="num">861.773</td>
             </tr>
             <tr>
               <td>Roraima</td>
-              <td class="num">605.361</td>
+              <td class="num">631.181</td>
             </tr>
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
-                <td td class="num"><strong>210.147.125</strong></td>
+                <th scope="row">Total de Habitantes</th>
+                <td td class="num"><strong>211.755.692</strong></td>
             </tr>
+            
         </tfoot>
     </table>
+    
+    <p>Dados do IBGE com as estimativas da população dos Estados do Brasil em referência a data de 01/07/2020.</p>
+    
 </body>
 </html>
